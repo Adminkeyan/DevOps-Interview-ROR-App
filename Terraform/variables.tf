@@ -1,13 +1,16 @@
+
 variable "aws_region" {
   default = "ap-south-1"
 }
 
 variable "db_username" {
-  default = "postgres"
+  description = "Database username"
+  type        = string
+  default     = "sampleuser"
 }
 
 variable "db_password" {
-  description = "Admin@123"
+  description = "Database password"
   type        = string
-  sensitive   = true
+  default     = "SampleP@ssw0rd!"
 }
