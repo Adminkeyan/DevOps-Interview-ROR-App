@@ -13,7 +13,7 @@ resource "aws_ecs_task_definition" "app" {
   container_definitions = jsonencode([
     {
       name  = "ror",
-      image = "489502444480.dkr.ecr.ap-south-1.amazonaws.com/devops-ror-app:latest",
+      image = "489502444480.dkr.ecr.ap-south-1.amazonaws.com/devops-ror-app:v1.0.0",
       portMappings = [
         {
           containerPort = 3000,
