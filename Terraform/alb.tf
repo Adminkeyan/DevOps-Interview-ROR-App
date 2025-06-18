@@ -8,10 +8,11 @@ resource "aws_lb" "app_lb" {
 }
 
 resource "aws_lb_target_group" "tg" {
-  name     = "ror-tg"
-  port     = 3000
-  protocol = "HTTP"
-  vpc_id   = module.vpc.vpc_id
+  name        = "ror-tg"
+  port        = 3000
+  protocol    = "HTTP"
+  target_type = "ip"
+  vpc_id      = module.vpc.vpc_id
 }
 
 resource "aws_lb_listener" "listener" {
