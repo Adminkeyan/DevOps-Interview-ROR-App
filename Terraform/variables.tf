@@ -14,3 +14,15 @@ variable "db_password" {
   type        = string
   default     = "SampleP@ssw0rd!"
 }
+variable "access_key_id" {
+  description = "AWS Access Key ID"
+  type        = string
+  sensitive   = true
+}
+
+variable "secret_access_key" {
+  description = "AWS Secret Access Key"
+  type        = string
+  sensitive   = true
+}
+
