@@ -47,11 +47,11 @@ resource "aws_ecs_task_definition" "app" {
         },
         {
           name  = "ACCESS_KEY_ID",
-          value = "AKIAXD6E6RPACFCJ2EIW"
+          value = ""
         },
         {
           name  = "SECRET_ACCESS_KEY",
-          value = "IPu5vZMyvf/Ur8ijlnVO6P8+p2PTdd8bVSV9Gg7F"
+          value = ""
         },
         {
           name  = "BUCKET",
