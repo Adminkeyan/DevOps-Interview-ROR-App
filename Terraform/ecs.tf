@@ -22,24 +22,44 @@ resource "aws_ecs_task_definition" "app" {
       ],
       environment = [
         {
-          name  = "DATABASE_HOST",
-          value = aws_db_instance.rds.address
-        },
-        {
-          name  = "DATABASE_USER",
-          value = var.db_username
-        },
-        {
-          name  = "DATABASE_PASSWORD",
-          value = var.db_password
-        },
-        {
           name  = "RAILS_ENV",
           value = "production"
         },
         {
-          name  = "S3_BUCKET",
+          name  = "RDS_DB_NAME",
+          value = "rorappdb"
+        },
+        {
+          name  = "RDS_USERNAME",
+          value = var.db_username
+        },
+        {
+          name  = "RDS_PASSWORD",
+          value = var.db_password
+        },
+        {
+          name  = "RDS_HOSTNAME",
+          value = aws_db_instance.rds.address
+        },
+        {
+          name  = "RDS_PORT",
+          value = "5432"
+        },
+        {
+          name  = "ACCESS_KEY_ID",
+          value = "AKIAXD6E6RPACFCJ2EIW"
+        },
+        {
+          name  = "SECRET_ACCESS_KEY",
+          value = "IPu5vZMyvf/Ur8ijlnVO6P8+p2PTdd8bVSV9Gg7F"
+        },
+        {
+          name  = "BUCKET",
           value = aws_s3_bucket.app_bucket.bucket
+        },
+        {
+          name  = "REGION",
+          value = var.aws_region
         }
       ]
     }
