@@ -1,2 +1,2 @@
 db_username = "sampleuser"
-db_password = "SampleP@ssw0rd!"
+db_password = "SamplePssw0rd123"
