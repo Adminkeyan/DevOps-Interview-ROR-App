@@ -3,7 +3,7 @@ resource "aws_db_instance" "rds" {
   engine                 = "postgres"
   instance_class         = "db.t3.micro"
   allocated_storage      = 20
-  name                   = "rorappdb"
+  identifier             = "rorappdb"
   username               = var.db_username
   password               = var.db_password
   db_subnet_group_name   = aws_db_subnet_group.db_subnet.name
